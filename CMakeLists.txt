@@ -45,11 +45,13 @@ file(GLOB umbraSrcFiles
   ${PROJECT_SOURCE_DIR}/src/**/*.cpp
 )
 
-# add_library(libUmbra ${hexSrcFiles})
-# set_target_properties(libUmbra PROPERTIES LINKER_LANGUAGE CXX)
-# target_include_directories(libUmbra PUBLIC
-#   ${PROJECT_SOURCE_DIR}/deps/HexBase/src/include/HexBase
-# )
+add_compile_definitions(UMBRA_DEBUG)
+
+add_library(libUmbra ${umbraSrcFiles})
+set_target_properties(libUmbra PROPERTIES LINKER_LANGUAGE CXX)
+target_include_directories(libUmbra PUBLIC
+  ${PROJECT_SOURCE_DIR}/deps/HexBase/src/include
+)
 
 enable_testing()
 add_subdirectory(${PROJECT_SOURCE_DIR}/tests)
