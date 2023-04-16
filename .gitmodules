@@ -1,0 +1,3 @@
+[submodule "deps/HexBase"]
+	path = deps/HexBase
+	url = https://github.com/Luh-code/HexBase.git
