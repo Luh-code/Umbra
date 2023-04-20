@@ -19,4 +19,4 @@ target_include_directories(test0 PUBLIC
   ${PROJECT_SOURCE_DIR}/src/include
   ${PROJECT_SOURCE_DIR}/deps/HexBase/src/include
 )
-add_test(test0 ../bin/Debug/test0.exe)
+add_test(test0 ../bin/test0.exe)
